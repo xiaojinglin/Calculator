@@ -33,7 +33,7 @@ namespace Calculator
                         continue;
                     }
                 }
-                //Prompt the user for an operation (+ - / *).
+                //Prompt the user for an operation (+ - / *^).
                 Console.WriteLine("Please enter an operation (+ - / *^)(Type \"quit\" to exit):");
                 enter = Console.ReadLine();
                 if (enter.ToLower() == "quit")
