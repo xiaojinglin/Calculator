@@ -34,13 +34,13 @@ namespace Calculator
                     }
                 }
                 //Prompt the user for an operation (+ - / *).
-                Console.WriteLine("Please enter an operation (+ - / *)(Type \"quit\" to exit):");
+                Console.WriteLine("Please enter an operation (+ - / *^)(Type \"quit\" to exit):");
                 enter = Console.ReadLine();
                 if (enter.ToLower() == "quit")
                 {
                     break;
                 }
-                else if(enter == "+" || enter == "-" || enter == "*" || enter == "/")
+                else if(enter == "+" || enter == "-" || enter == "*" || enter == "/" || enter == "^")
                 {
                     operation = enter;
                 }
@@ -89,6 +89,10 @@ namespace Calculator
                 else if (operation == "/")
                 {
                     result = num1 / num2;
+                }
+                else
+                {
+                    result = Math.Pow(num1,num2);
                 }
                 //Print the result to the screen.
                 Console.WriteLine(num1 + " " + operation + " " + num2 +" = " + result);
